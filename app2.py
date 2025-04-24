@@ -15,7 +15,7 @@ os.environ["LANGCHAIN_PROJECT"]="Simple Q&A Chatbot With Gemini"
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Gemini Response Generator Function
-def generate_response(question, model_name="gemini-pro"):
+def generate_response(question, model_name="gemini-2.0-flash"):
     model = genai.GenerativeModel(model_name)
     response = model.generate_content(question)
     return response.text
